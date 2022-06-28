@@ -7,7 +7,6 @@
 #include <stdlib.h>
 
  
-
 GLfloat cloud1x = 0.0f; 
 GLfloat cloud2x = 0.0f;  
 GLfloat angle = 0.0f;   
