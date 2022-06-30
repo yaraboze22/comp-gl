@@ -79,6 +79,125 @@ int main(int argc, char *argv[])
     glutCreateWindow("18101516 - 18101737");
 
     init();
+ void display(void)
+{
+    
+
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    
+   
+    
+    
+
+    
+    //----------CAR AND WHEELS----------
+    //car and wheels are pushed in matrix so they can be translated on th X axis
+    glPushMatrix();
+    glTranslatef(carAndWheelX, 0.0f, 0.0f);
+    
+    //----------CAR TOP----------
+    glColor3f(redf, greenf, bluef);
+    glBegin(GL_POLYGON);
+    glVertex2f(-100, -80);
+    glVertex2f(-105, -85);
+    glVertex2f(-55, -85);
+    glVertex2f(-60, -80);
+    glEnd();
+    
+    //----------CAR BODY----------
+    glColor3f(redf, greenf, bluef);
+    glBegin(GL_POLYGON);
+    glVertex2f(-110, -85);
+    glVertex2f(-110, -95);
+    glVertex2f(-50, -95);
+    glVertex2f(-50, -85);
+    glEnd();
+    
+    //----------CAR HEADLIGHTS----------
+    glColor3f(1, 1, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(-55, -88);
+    glVertex2f(-55, -91);
+    glVertex2f(-50, -91);
+    glVertex2f(-50, -88);
+    glEnd();
+    
+    //----------WHEEL 1----------
+    glColor3f(0.0, 0.0, 0.0);
+    glBegin(GL_POLYGON);
+    for(int i = 0; i < 360; i++) {
+        theta = i * 3.142 /180;
+        glVertex2f(-95 + 5 * cos(theta), -95 + 5 * sin(theta));
+    }
+    glEnd();
+    
+    glColor3f(1.0, 1.0, 1.0);
+    glBegin(GL_POLYGON);
+    for(int i = 0; i < 360; i++) {
+        theta = i * 3.142 /180;
+        glVertex2f(-95  + 2.5 * cos(theta), -95 + 2.5 * sin(theta));
+    }
+    glEnd();
+    //----------END OF WHEEL 1----------
+    
+    //----------WHEEL 2----------
+    glColor3f(0.0, 0.0, 0.0);
+    glBegin(GL_POLYGON);
+    for(int i = 0; i < 360; i++) {
+        theta = i * 3.142 /180;
+        glVertex2f(-65 + 5 * cos(theta), -95 + 5 * sin(theta));
+    }
+    glEnd();
+    
+    glColor3f(1.0, 1.0, 1.0);
+    glBegin(GL_POLYGON);
+    for(int i = 0; i < 360; i++) {
+        theta = i * 3.142 /180;
+        glVertex2f(-65  + 2.5 * cos(theta), -95 + 2.5 * sin(theta));
+    }
+    glEnd();
+    //----------END OF WHEEL 2----------
+    glPopMatrix();
+    
+    
+    
+    //----------WHEEL 1 BAR----------
+    //wheel bar is pushed in a matrix so it can be rotated and translated
+    glPushMatrix();
+    glTranslatef(carAndWheelX + -95.0f, -95.0f, 0.0f);
+    glRotatef(angle, 0.0f, 0.0f, 1.0f);
+    glTranslatef(-1*carAndWheelX + 95.0f, 95.0f, 0.0f);
+    glTranslatef(carAndWheelX, 0.0, 0.0);
+    glColor3f((float)46/255, (float)43/255, (float)42/255);
+    glBegin(GL_POLYGON);
+    glVertex2f(-97, -96);
+    glVertex2f(-97, -94);
+    glVertex2f(-93, -94);
+    glVertex2f(-93, -96);
+    glEnd();
+    glPopMatrix();
+
+    //----------WHEEL 2 BAR----------
+    //whee2 bar is pushed in a matrix so it can be rotated and translated
+    glPushMatrix();
+    glTranslatef(carAndWheelX + -65.0f, -95.0f, 0.0f);
+    glRotatef(angle, 0.0f, 0.0f, 1.0f);
+    glTranslatef(-1*carAndWheelX + 65.0f, 95.0f, 0.0f);
+    glTranslatef(carAndWheelX, 0.0, 0.0);
+    glColor3f((float)46/255, (float)43/255, (float)42/255);
+    glBegin(GL_POLYGON);
+    glVertex2f(-67, -96);
+    glVertex2f(-67, -94);
+    glVertex2f(-63, -94);
+    glVertex2f(-63, -96);
+    glEnd();
+    glPopMatrix();
+    
+    
+    glutSwapBuffers();
+
+}
 
     glutDisplayFunc(display);
     glutTimerFunc(0, timer, 0);
