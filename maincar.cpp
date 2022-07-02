@@ -36,7 +36,145 @@ void display(void)
     
    
     
+    //----------MAIN ROAD----------
+    glColor3f(0.2235f, 0.2784f, 0.30588f);
+    glBegin(GL_POLYGON);
+    glVertex3f(-100, -100, 0);
+    glVertex3f(-100, -60, 0);
+    glVertex3f(100, -60, 0);
+    glVertex3f(100, -100, 0);
+    glEnd();
     
+    //----------MAIN ROAD DIVIDER 1----------
+    glColor3f(1.0, 1.0, 1.0);
+    glBegin(GL_POLYGON);
+    glVertex3f(-90, -85, 0);
+    glVertex3f(-90, -80, 0);
+    glVertex3f(-70, -80, 0);
+    glVertex3f(-70, -85, 0);
+    glEnd();
+    
+    //----------MAIN ROAD DIVIDER 2----------
+    glColor3f(1.0, 1.0, 1.0);
+    glBegin(GL_POLYGON);
+    glVertex3f(-50, -85, 0);
+    glVertex3f(-50, -80, 0);
+    glVertex3f(-30, -80, 0);
+    glVertex3f(-30, -85, 0);
+    glEnd();
+    
+    //----------MAIN ROAD DIVIDER 3----------
+    glColor3f(1.0, 1.0, 1.0);
+    glBegin(GL_POLYGON);
+    glVertex3f(-10, -85, 0);
+    glVertex3f(-10, -80, 0);
+    glVertex3f(10, -80, 0);
+    glVertex3f(10, -85, 0);
+    glEnd();
+    
+    //----------MAIN ROAD DIVIDER 4----------
+    glColor3f(1.0, 1.0, 1.0);
+    glBegin(GL_POLYGON);
+    glVertex3f(30, -85, 0);
+    glVertex3f(30, -80, 0);
+    glVertex3f(50, -80, 0);
+    glVertex3f(50, -85, 0);
+    glEnd();
+    
+    //----------MAIN ROAD DIVIDER 5----------
+    glColor3f(1.0, 1.0, 1.0);
+    glBegin(GL_POLYGON);
+    glVertex3f(70, -85, 0);
+    glVertex3f(70, -80, 0);
+    glVertex3f(90, -80, 0);
+    glVertex3f(90, -85, 0);
+    glEnd();
+    
+    
+    //----------TRIMMED GRASS----------
+    glColor3f(0.5019, 0.58431, 0.34901);
+    glBegin(GL_POLYGON);
+    glVertex2f(-100, -60);
+    glVertex2f(-100, -70);
+    glVertex2f(100, -70);
+    glVertex2f(100, -60);
+    glEnd();
+    
+    //----------GRASS----------
+    glColor3f(0.423, 0.5411, 0.239);
+    glBegin(GL_POLYGON);
+    glVertex2f(-100, -60);
+    glVertex2f(-100, 0);
+    glVertex2f(100, 0);
+    glVertex2f(100, -60);
+    glEnd();
+    
+    
+    //----------MAIN BUILDING----------
+    glColor3f((float)46/255, (float)43/255, (float)42/255);
+    glBegin(GL_POLYGON);
+    glVertex2f(-10, 40);
+    glVertex2f(-10, -10);
+    glVertex2f(25, -10);
+    glVertex2f(25, 40);
+    glEnd();
+    
+    
+    
+    //----------BULDING WINDOWS ROW1----------
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glBegin(GL_POLYGON);
+    glVertex2f(-5, 30);
+    glVertex2f(-5, 25);
+    glVertex2f(0, 25);
+    glVertex2f(0, 30);
+    glEnd();
+    
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glBegin(GL_POLYGON);
+    glVertex2f(5, 30);
+    glVertex2f(5, 25);
+    glVertex2f(10, 25);
+    glVertex2f(10, 30);
+    glEnd();
+    
+    
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glBegin(GL_POLYGON);
+    glVertex2f(15, 30);
+    glVertex2f(15, 25);
+    glVertex2f(20, 25);
+    glVertex2f(20, 30);
+    glEnd();
+    //----------END OF BULDING WINDOWS ROW1----------
+    
+    
+    //----------BULDING WINDOWS ROW2----------
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glBegin(GL_POLYGON);
+    glVertex2f(-5, 15);
+    glVertex2f(-5, 10);
+    glVertex2f(0, 10);
+    glVertex2f(0, 15);
+    glEnd();
+    
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glBegin(GL_POLYGON);
+    glVertex2f(5, 15);
+    glVertex2f(5, 10);
+    glVertex2f(10, 10);
+    glVertex2f(10, 15);
+    glEnd();
+    
+    
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glBegin(GL_POLYGON);
+    glVertex2f(15, 15);
+    glVertex2f(15, 10);
+    glVertex2f(20, 10);
+    glVertex2f(20, 15);
+    glEnd();
+    //----------END OF BULDING WINDOWS ROW2----------
 
     
     //----------CAR AND WHEELS----------
